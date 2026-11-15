@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://b1ngautned0fy"]
+
+[ext_resource type="Texture2D" uid="uid://cs3vebry3l64r" path="res://Stylized_environment.webp" id="1_3087i"]
+[ext_resource type="Texture2D" uid="uid://cwxjwi586i2fb" path="res://Jeremy.webp" id="2_8rbqu"]
+[ext_resource type="Script" uid="uid://ccdeepvy6ay47" path="res://player.gd" id="3_f10ba"]
+[ext_resource type="Texture2D" uid="uid://dnehlhsp308tu" path="res://PaulDown1.webp" id="4_bubqf"]
+[ext_resource type="Texture2D" uid="uid://bjfsy05slpsa2" path="res://Paul.webp" id="5_i8de0"]
+[ext_resource type="Texture2D" uid="uid://dsug47syhy4rr" path="res://PaulDown2.webp" id="6_2k584"]
+[ext_resource type="Texture2D" uid="uid://r0vg2v7oxsih" path="res://PaulUp2.webp" id="7_k4mg5"]
+[ext_resource type="Texture2D" uid="uid://cde33fxr4wam8" path="res://Paul.back.webp" id="8_uvvxg"]
+[ext_resource type="Texture2D" uid="uid://bpe4u45qgipir" path="res://PaulUp1.webp" id="9_das8d"]
+[ext_resource type="Texture2D" uid="uid://c0ke8c25txyja" path="res://Paulleft1Usethis.webp" id="10_wxta2"]
+[ext_resource type="Texture2D" uid="uid://bs1b4us5oo4jp" path="res://Paulleft2.webp" id="11_kelej"]
+[ext_resource type="Texture2D" uid="uid://duf6butva5q0s" path="res://Paul.left.3.webp" id="12_id0vw"]
+[ext_resource type="Texture2D" uid="uid://bfrdsrba7ssvn" path="res://Paulright1.webp" id="13_ofvsh"]
+[ext_resource type="Texture2D" uid="uid://n0j6ehsh0pib" path="res://Paulright2.webp" id="14_615cp"]
+[ext_resource type="Texture2D" uid="uid://ds5dqet6u0t3q" path="res://Paulright3.webp" id="15_wrrxw"]
+[ext_resource type="Script" uid="uid://cyg5mobroburn" path="res://collision_shape_2d.gd" id="16_2k584"]
+[ext_resource type="Script" uid="uid://b8hvr8wpeo7dy" path="res://animated_sprite_2d.gd" id="16_6rd3v"]
+[ext_resource type="Texture2D" uid="uid://bvrgsns72t5ik" path="res://ParryBar.webp" id="18_f10ba"]
+[ext_resource type="Texture2D" uid="uid://cpuwkxfou1dla" path="res://Barre.webp" id="19_bubqf"]
+[ext_resource type="Script" uid="uid://co5f2nmc8a6o4" path="res://parry_barre.gd" id="20_i8de0"]
+[ext_resource type="Script" uid="uid://vswtpl27wum2" path="res://enemy.gd" id="21_k4mg5"]
+[ext_resource type="Texture2D" uid="uid://dg1sxuu8hjaa4" path="res://Lanscape_extended (1).webp" id="22_k4mg5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3087i"]
+size = Vector2(1399.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iodr6"]
+size = Vector2(1395.5, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y34o4"]
+size = Vector2(6, 1617)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_myen0"]
+size = Vector2(16, 1582)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0e48y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bubqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_i8de0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2k584")
+}],
+"loop": 0,
+"name": &"Paul walk backward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_i8de0")
+}],
+"loop": 1,
+"name": &"Paul walk backward idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_k4mg5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_uvvxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_das8d")
+}],
+"loop": 1,
+"name": &"Paul walk forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_uvvxg")
+}],
+"loop": 1,
+"name": &"Paul walk forward idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_wxta2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_kelej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_id0vw")
+}],
+"loop": 1,
+"name": &"Paul walk left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_kelej")
+}],
+"loop": 1,
+"name": &"Paul walk left idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_ofvsh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_615cp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_wrrxw")
+}],
+"loop": 1,
+"name": &"Paul walk right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_615cp")
+}],
+"loop": 1,
+"name": &"Paul walk right idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ahfwt"]
+size = Vector2(62, 85)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qifu5"]
+size = Vector2(703, 688)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5mum5"]
+size = Vector2(84, 101)
+
+[node name="Node2D" type="Node2D" unique_id=1028189957]
+position = Vector2(22, 12)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=733975119]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1097996341]
+position = Vector2(-4.75, -794)
+shape = SubResource("RectangleShape2D_3087i")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1565846113]
+position = Vector2(-20.75, 771)
+shape = SubResource("RectangleShape2D_iodr6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1732136617]
+position = Vector2(-708, -31.5)
+shape = SubResource("RectangleShape2D_y34o4")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=103400795]
+position = Vector2(673, -10)
+shape = SubResource("RectangleShape2D_myen0")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1416254052]
+z_index = -1
+position = Vector2(-26, -8.000004)
+scale = Vector2(2.7460048, 3.1110585)
+texture = ExtResource("1_3087i")
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=2141481317 groups=["Player"]]
+position = Vector2(-19, 290)
+disable_mode = 1
+script = ExtResource("3_f10ba")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player" unique_id=205400759]
+position = Vector2(-1, 0)
+scale = Vector2(2.7499998, 2.7499998)
+sprite_frames = SubResource("SpriteFrames_0e48y")
+animation = &"Paul walk forward idle"
+script = ExtResource("16_6rd3v")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1440102795]
+position = Vector2(-9, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1885338674]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_ahfwt")
+script = ExtResource("16_2k584")
+
+[node name="ParryBar" type="Sprite2D" parent="." unique_id=1499841095]
+position = Vector2(-1281, 302)
+scale = Vector2(0.96874994, 0.96874994)
+texture = ExtResource("18_f10ba")
+
+[node name="Parry barre" type="Sprite2D" parent="." unique_id=45134930]
+position = Vector2(-1279, 318)
+texture = ExtResource("19_bubqf")
+script = ExtResource("20_i8de0")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1359232998]
+z_index = -3
+position = Vector2(-5565, 3190)
+scale = Vector2(11.766, 11.766)
+texture = ExtResource("22_k4mg5")
+
+[node name="Enemy" type="CharacterBody2D" parent="." unique_id=1855872899]
+script = ExtResource("21_k4mg5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Enemy" unique_id=2146501697]
+position = Vector2(-22, -11)
+scale = Vector2(3.6875, 3.6875)
+texture = ExtResource("2_8rbqu")
+
+[node name="Detection" type="Area2D" parent="Enemy" unique_id=840198242]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Detection" unique_id=682230062]
+position = Vector2(-20, -11)
+shape = SubResource("RectangleShape2D_qifu5")
+
+[node name="Punch" type="Area2D" parent="Enemy" unique_id=570610138]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy/Punch" unique_id=2110592883]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy" unique_id=1515905270]
+position = Vector2(-21, -7.5)
+shape = SubResource("RectangleShape2D_5mum5")
+
+[connection signal="body_entered" from="Enemy/Detection" to="Enemy" method="_on_Detection_body_entered"]
